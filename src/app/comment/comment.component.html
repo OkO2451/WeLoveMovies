@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <h2>Add a comment</h2>
+  <form (ngSubmit)="addComment()" class="mb-4">
+    <div class="form-group">
+      <label for="contenu">Comment:</label>
+      <input id="contenu" [(ngModel)]="contenu" name="contenu" required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Comment</button>
+  </form>
+
+  <div *ngIf="comments.length > 0">
+    <h2>Comments</h2>
+    <div *ngFor="let comment of comments" class="card mb-2">
+      <div class="card-body">
+        <p class="card-text">{{ comment.contenu }}</p>
+        <p class="card-subtitle mb-2 text-muted">{{ comment.auteur }} - {{ comment.date }}</p>
+      </div>
+    </div>
+  </div>
+</div>  

@@ -1,0 +1,43 @@
+.search-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+  }
+  
+  .form-inline .form-control {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .form-inline .btn {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .card {
+    background-color: #424242;
+  }
+  
+  .btn-primary {
+    background-color: #1e88e5;
+    border-color: #1e88e5;
+  }
+  
+  .btn-secondary {
+    background-color: #757575;
+    border-color: #757575;
+  }
+  
+  .form-control {
+    background-color: #616161;
+    color: #e0e0e0;
+  }

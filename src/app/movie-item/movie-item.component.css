@@ -1,0 +1,22 @@
+.card {
+    background-color: #424242;
+    color: #e0e0e0;
+  }
+  
+  .card-title {
+    color: #e0e0e0;
+  }
+  
+  .list-inline-item {
+    color: #e0e0e0;
+  }
+  
+  .btn-outline-secondary {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #e0e0e0;
+    color: #424242;
+  }

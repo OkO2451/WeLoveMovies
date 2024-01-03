@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div style="margin: 2%" class="card">
+  <h2 class="card-header">
+    Film details
+  </h2>
+
+
+<div class="container" style="margin: 3%">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <img src="https://image.tmdb.org/t/p/w300{{film.backdrop_path}}" class="card-img-top" alt="">
+    </div>
+    <div class="col-md-9 ">
+      <h1 class="mb-4 .title">{{film.title}}</h1>
+      <div class="row mb-3">
+        <div class="col-md-3">Original Title:</div>
+        <div class="col-md-9 " > <strong style="color: rgb(4, 4, 34)">
+          {{film.original_title}}
+        </strong>
+          </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-3">Original Language:</div>
+        <div class="col-md-9"><div style="color: saddlebrown">{{film.original_language}}</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-3">Genres:</div>
+        <div class="col-md-9">
+          <ul>
+            <div style="color: rgb(4, 4, 34)"><li *ngFor="let genre of film.genres">{{genre.name}}</li></div>
+          </ul>
+        </div>
+      <div class="row mb-3">
+        <div class="col-md-3">Status:</div>
+        <div class="col-md-9"><div style="color: rgb(2, 2, 44)">{{film.status}}</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-3">Release Date:</div>
+        <div class="col-md-9"><div style="color: rgb(4, 4, 34)">{{film.release_date}}</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-3">Overview:</div>
+        <div class="col-md-9"><div style="color: rgb(3, 3, 65)">{{film.overview}}</div></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-3">Vote Average:</div>
+        <div class="col-md-9"><div style="color:rgb(4, 4, 34)">{{film.vote_average}}</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-comment [reference]="idFilm"></app-comment>
+</div>

@@ -1,0 +1,28 @@
+<div class="">
+  <app-navbar (search)="handleKeySearch($event)"></app-navbar>
+ 
+</div>
+
+<div class="container bg-dark text-white">
+  
+
+  <div class="row mt-4">
+    <div *ngFor="let movie of allMovies" class="col-lg-4 col-md-6 col-sm-12">
+      <app-movie-item [movie]="movie"></app-movie-item>
+    </div>
+  </div>
+  
+</div>
+<nav aria-label="Movie page navigation">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [class.disabled]="page === 1">
+      <a class="page-link" href="#" (click)="prevPage($event)">Previous</a>
+    </li>
+    <!-- to smow the page number-->
+    <li class="page-item" >
+      <a class="page-link" >{{ page }}</a>
+    <li class="page-item" [class.disabled]="page === totalPages">
+      <a class="page-link" href="#" (click)="nextPage($event)">Next</a>
+    </li>
+  </ul>
+</nav>

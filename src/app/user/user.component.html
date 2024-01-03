@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="container user-page">
+  <h1 class="my-4">Welcome, {{ this.user.username }}!</h1>
+  <p>Your email is: {{ this.user.email }}</p>
+  <p>Your role is: </p>
+
+  <h2 class="my-4">Your Favorite Movies:</h2>
+  <div class="row mt-4">
+    <div *ngFor="let movie of favoriteMovies" class="col-lg-4 col-md-6 col-sm-12">
+      <app-movie-item [movie]="movie"></app-movie-item>
+    </div>
+  </div>
+</div>

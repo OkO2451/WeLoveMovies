@@ -1,0 +1,21 @@
+<div
+  class="card mb-3"
+  [routerLink]="['/movie-detail', movie.id]"
+  style="cursor: pointer;"
+  [title]="movie.title"
+>
+  <img
+    class="card-img-top"
+    src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}"
+    alt="backdrop"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
+    <!--<p class="card-text">{{movie.overview}}</p>-->
+    <ul class="list-inline">
+      <li class="list-inline-item">Views: {{movie.popularity}}</li>
+    </ul>
+  </div>
+  
+</div>
+<button class="heart-button" (click)="handleFavoriteClick(movie.id)">&#10084;</button>
